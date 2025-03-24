@@ -1,0 +1,195 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+}
+
+body {
+  padding: 20px;
+  background-color: black;
+  background-image: url("space-bg.jpg");
+  background-size: cover;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+.top-header {
+  font-size: 46px;
+  font-weight: bold;
+  border-bottom: 2px #adadad solid;
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  min-width:600px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  align-items: center;
+  margin:auto;
+}
+
+#apod-img {
+  height: 500px;
+  border-radius: 20px;
+}
+
+#apod-explanation {
+  width: 500px;
+  border-radius: 20px;
+  background-color: #353535;
+  padding: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#apod-explanation > p {
+  text-align: left;
+  line-height: 1.6;
+}
+
+#apod-date {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+input[type="date"] {
+  color: black;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #858585;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#date-btn {
+  width: 100px;
+}
+
+/* dev styles - to be changed or removed by CA */
+input,
+select {
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  margin-top:10px;
+}
+option{
+  color:black;
+}
+
+input[type="submit"] {
+  background-color: #858585;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  display:block;
+  margin:auto;
+  margin-top:10px;
+  font-size: 16px;
+}
+
+#mars-form {
+  width: 45%;
+  min-width: 500px;
+  text-align: center;
+  background-color: #353535;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  line-height: 1.4;
+}
+
+.rover-img {
+  width: 100%;
+  margin-top: 20px;  
+}
+
+.photos-container {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  min-width: 500px;
+  margin-left: 40px;
+}
+label {
+  margin: 15px;
+}
+.photos-scroll {
+  height: 500px;
+  overflow-y:auto;
+}
+
+#no-photos {
+  width: 40%;
+  min-width: 400px;
+  text-align: center;
+}
+#mars-instructions{
+  border-bottom:1px solid #adadad;
+  padding-bottom:14px;
+}
+
+#camera-heading{
+  text-align:center;
+}
+
+.link-container{
+  margin: 40px; 
+  width: 500px; 
+}
+
+
+#apod-link{
+  background-image: url("1801911.jpg");
+}
+
+#mars-link{
+  background-image: url("wp3071126.jpg");
+}
+
+.top-header{
+  display: flex;
+  justify-content: space-between; 
+}
+
+.header-link{
+  text-decoration: none;
+  font-size: 24px; 
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.header-link:hover {opacity: 1}
+
+.big-link{
+  width: 100%;
+  padding: 200px 0px; 
+  background-color: grey;
+  border-radius: 20px; 
+  text-align: center;
+  font-size: 45px; 
+  background-position: center;
+  text-shadow: 2px 2px 2px black;
+  text-decoration: none; 
+  display: inline-block; 
+  background-size: cover;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.big-link:hover {opacity: 1}
+
+

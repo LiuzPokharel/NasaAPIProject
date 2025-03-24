@@ -1,0 +1,9 @@
+{% set page_title="404 - Page Not Found" %}
+
+{% extends "layout.html" %}
+{% block heading %}<h1>Page Not Found</h1>{% endblock %}
+{% block content %}
+  
+  <p>Just empty space... <a href="{{ url_for('home') }}">Back Home</a></p>
+  
+{% endblock %}

@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>{{page_title}}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='icon.png')}}">
+</head>
+
+<body>
+
+    <header class="top-header">
+      <nav class = "header-links">NASA APP
+        <a class = "header-link" href = "{{url_for('home')}}">HOME</a>
+        <a class = "header-link" href = "{{url_for('apod')}}">APOD</a>
+        <a class = "header-link" href = "{{url_for('mars')}}">MARS</a>
+      </nav>
+    </header>
+
+    {% block heading %} {% endblock %} 
+    {% block content %} {% endblock %}
+
+</body>
+
+</html>

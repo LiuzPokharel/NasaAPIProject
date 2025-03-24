@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% set page_title="Mars" %} 
+
+{% block heading %}
+<h1>Mars Rover Camera Viewer</h1>
+{% endblock %} 
+
+{% block content %}
+<div class="container">
+    <form id="mars-form" method="POST" action="{{ url_for('mars') }}">
+        <table>
+            <tr>
+                <th>
+                    Rover Name
+                </th>
+                <td>
+                    {{ mission.name }}
+                </td>
+                <tr>
+                    <th>
+                        Launch Date
+                    </th>
+                    <td>
+                        {{ mission.launch_date }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Landing Date
+                    </th>
+                    <td>
+                        {{ mission.landing_date }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Photos taken
+                    </th>
+                    <td>
+                        {{ mission.total_photos }}
+                    </td>
+                </tr>
+            </tr>
+        </table>
+        <p id="mars-explanation">
+            Curiosity is a car-sized Mars rover designed to explore the Gale crater on Mars as part of NASA's Mars Science Laboratory (MSL) mission. 
+            Curiosity was launched from Cape Canaveral (CCAFS) on 26 November 2011, at 15:02:00 UTC and landed on Aeolis Palus inside Gale crater on Mars on 6 August 2012, 05:17:57 UTC. 
+            The Bradbury Landing site was less than 2.4 km (1.5 mi) from the center of the rover's touchdown target after a 560 million km (350 million mi) journey. </p>
+        <p id="mars-instructions">
+            This app will allow you to view photos from the different cameras mounted on the rover. 
+            Select the sol date (Martian days after landing) and the camera for the photos you want to view.
+            <strong>Not all dates and cameras may have photos</strong>
+        </p>
+        <label for="sol-input">Sol</label>
+        <input type="number" id="sol-input" 
+               placeholder="days after landing" 
+               name="sol" value="{{ sol }}"
+               min="0"
+               max="{{mission.max_sol}}" 
+               required>
+        <label for="camera-select">Choose a camera:</label>
+        <select id="camera-select" name="camera" value="{{ camera }}">
+            <option value="fhaz">Front Hazard Avoidance Camera</option>
+            <option value="rhaz">Rear Hazard Avoidance Camera</option>
+            <option value="mast">Mast Camera</option>
+        </select>
+        <input type="submit">
+    </form>
+
+{% if photos %}
+
+<div class="photos-container">
+    <h2 id="camera-heading">{{photos[0].camera.full_name}}</h3>
+    <div class="photos-scroll">
+    {% for photo in photos %}
+       <img class="rover-img" src="{{ photo.img_src }}">
+    {% endfor %}
+    </div>
+</div>
+{% else %}
+<h2 id="no-photos">No photos!</h2>
+{% endif %}
+</div>
+
+{% endblock %}

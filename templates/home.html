@@ -1,0 +1,20 @@
+{% extends "layout.html" %} 
+{% set page_title="Home" %} 
+
+{% block heading %}
+<h1>HOME</h1>
+{% endblock %} 
+
+{% block content %}
+<div class = "container">
+<div class = "link-container">
+  <a class = "big-link" id = "apod-link" href = "{{url_for('apod')}}"></a>
+  <h3>APOD</h3> 
+</div> 
+
+<div class = "link-container">
+  <a class = "big-link" id = "mars-link" href = "{{url_for('mars')}}"></a>
+  <h3>MARS</h3> 
+</div> 
+</div>
+{% endblock %}
