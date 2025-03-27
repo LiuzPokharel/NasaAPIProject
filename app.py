@@ -34,12 +34,13 @@ def mars():
         camera = "fhaz"
             
     data = get_rover_photos(sol, camera)
+    print(data)
     return render_template(
         "mars.html",
         photos=data["photos"],
         sol=sol,
         camera=camera,
-        # mission=manifest["photo_manifest"]
+        mission=manifest["photo_manifest"]
     )
 
 
