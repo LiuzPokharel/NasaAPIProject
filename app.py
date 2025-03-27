@@ -14,6 +14,7 @@ manifest_api = "https://api.nasa.gov/mars-photos/api/v1/manifests/curiosity"
 def home():
     return render_template("home.html")
 
+"LiuzP"
 
 @app.route("/apod")
 @app.route("/apod/")
