@@ -20,7 +20,9 @@
 <script>
   function loadAPOD() {
     var date = document.getElementById("date-picker").value;
-    location.href = "{{url_for('apod')}}" + date;
+    if(date){
+        location.href = "{{url_for('apod', date='')}}" + date;
+    }
   }
 </script>
 {% endblock %}

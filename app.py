@@ -4,10 +4,10 @@ import requests
 app = Flask(__name__)
 
 # sign up here for your own api key: https://api.nasa.gov/
-api_key = "nsMLHCXa0PS7b58MnTKiwMwxz987bEaQqWGXxbcd"
+api_key = "GCu3SMG122rrPb8Bpk4bsialMhh7LZmatGrNodkr"
 nasa_api = "https://api.nasa.gov/planetary/apod"
-mars_api = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos"
-manifest_api = "https://api.nasa.gov/mars-photos/api/v1/manifests/curiosityt"
+mars_api = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos" 
+manifest_api = "https://api.nasa.gov/mars-photos/api/v1/manifests/curiosity"
 
 
 @app.route("/")
@@ -81,6 +81,7 @@ def get_rover_manifest():
             "explanation": "NEIN!",
             "url" : url_for('static', filename="file_not_found.jpg")
         }
+        return error_mars 
     
     return res.json()
 
