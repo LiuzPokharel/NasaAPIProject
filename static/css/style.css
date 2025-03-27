@@ -76,7 +76,6 @@ button {
   width: 100px;
 }
 
-/* dev styles - to be changed or removed by CA */
 input,
 select {
   color: black;
@@ -191,5 +190,4 @@ label {
 }
 
 .big-link:hover {opacity: 1}
-
 
